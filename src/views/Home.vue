@@ -1,18 +1,28 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+  <main class="home">
+    <Title type="large" text="Pessoas que vão ganhar dinheiro" />
+  </main>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue';
+import Title from '@/components/Title/Title.vue';
 
 export default {
   name: 'Home',
   components: {
-    HelloWorld,
+    Title,
   },
 };
 </script>
+
+<style scoped lang="scss">
+@import "@/utils/mixin-style.scss";
+
+main {
+  padding: 28px 22px;
+
+  @include desktop {
+    padding: 28px 127px;
+  }
+}
+</style>
