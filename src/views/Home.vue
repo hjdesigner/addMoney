@@ -1,16 +1,19 @@
 <template>
   <main class="home">
     <Title type="large" text="Pessoas que vão ganhar dinheiro" />
+    <Card />
   </main>
 </template>
 
 <script>
 import Title from '@/components/Title/Title.vue';
+import Card from '@/components/Card/Card.vue';
 
 export default {
   name: 'Home',
   components: {
     Title,
+    Card,
   },
 };
 </script>
