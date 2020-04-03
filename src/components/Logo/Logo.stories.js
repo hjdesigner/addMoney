@@ -6,8 +6,18 @@ export default {
   component: Logo,
 };
 
-export const LogoMobile = () => ({
+export const LogoDefault = () => ({
   components: { Logo },
   template: '<div class="header"><logo /></div>',
+});
+
+export const LogoMobile = () => ({
+  components: { Logo },
+  template: '<div class="header"><logo type="mobile" /></div>',
+});
+
+export const LogoDesktop = () => ({
+  components: { Logo },
+  template: '<div class="header"><logo type="desktop" /></div>',
 });
 
