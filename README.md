@@ -25,5 +25,10 @@ npm run test:unit
 npm run lint
 ```
 
+### Storybook
+```
+npm run storybook
+```
+
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).

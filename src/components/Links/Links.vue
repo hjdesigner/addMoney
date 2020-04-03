@@ -13,6 +13,12 @@ export default {
     rotas: {
       type: Array,
       required: true,
+      default: () => ([
+        {
+          path: '/',
+          name: 'Home',
+        },
+      ]),
     },
   },
 };
