@@ -2,18 +2,25 @@
   <main class="home">
     <Title type="large" text="Pessoas que vão ganhar dinheiro" />
     <Card />
+    <Modal>
+      <ButtonValueAdd />
+    </Modal>
   </main>
 </template>
 
 <script>
 import Title from '@/components/Title/Title.vue';
 import Card from '@/components/Card/Card.vue';
+import Modal from '@/components/Modal/Modal.vue';
+import ButtonValueAdd from '@/components/ButtonValueAdd/ButtonValueAdd.vue';
 
 export default {
   name: 'Home',
   components: {
     Title,
     Card,
+    Modal,
+    ButtonValueAdd,
   },
 };
 </script>
