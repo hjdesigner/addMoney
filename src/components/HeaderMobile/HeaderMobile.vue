@@ -72,6 +72,7 @@ export default {
   position: absolute;
   top: 60px;
   width: 90%;
+  z-index: 10;
 
   @include desktop {
     display: none;

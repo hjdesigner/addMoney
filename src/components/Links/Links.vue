@@ -38,5 +38,10 @@ li {
   font-weight: 400;
   font-size: 1.4em;
   text-decoration: none;
+  transition: color ease-in-out .2s;
+
+  &:hover {
+    color: $color-black;
+  }
 }
 </style>

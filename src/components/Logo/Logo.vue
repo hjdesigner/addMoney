@@ -26,6 +26,7 @@ export default {
 
 <style scoped lang="scss">
 @import "@/utils/variables-style.scss";
+@import "@/utils/mixin-style.scss";
 
 .container {
   align-items: center;
@@ -41,7 +42,11 @@ export default {
   &.logo-desktop {
     border-radius: 34px;
     height: 84px;
-    width: 183px;
+    width: 150px;
+
+    @include desktopLarge {
+      width: 183px;
+    }
   }
 }
 .logo {

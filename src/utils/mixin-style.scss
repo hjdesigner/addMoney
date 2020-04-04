@@ -5,3 +5,8 @@
     @content;
   }
 }
+@mixin desktopLarge {
+  @media (min-width: #{$desktop-large-width}) {
+    @content;
+  }
+}

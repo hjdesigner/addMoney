@@ -5,7 +5,7 @@
       <div class="modal">
         <div class="modal-header">
           <h3>Quantos reais adicionar <span>para {{ modal.name }}</span>?</h3>
-          <button @click="closeModal">
+          <button @click="closeModal" aria-label="Fecha modal adicionar dinheiro">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M19 11L13 11 13 5 11 5 11 11 5 11 5 13 11 13 11 19 13 19 13 13 19 13z"/></svg>
           </button>
         </div>
@@ -50,10 +50,10 @@ export default {
 }
 .modal {
   background-color: $color-white;
-  height: 100%;
+  height: calc(100% - 97px);
   left: 0;
   position: fixed;
-  top: 0;
+  top: 97px;
   width: 100%;
   z-index: 20;
 
@@ -111,10 +111,24 @@ export default {
     }
   }
 }
-.transition-enter, .transition-leave-active {
+
+.transition-enter,
+.transition-leave-active {
   opacity: 0;
 }
-.transition-enter-active, .transition-leave-active {
-  transition: opacity .4s
+.transition-enter-active,
+.transition-leave-active {
+  transition: opacity .4s;
 }
+
+
+.transition-enter .modal,
+.transition-leave-active .modal {
+  transform: translateY(200px);
+}
+.transition-enter-active .modal,
+.transition-leave-active .modal {
+  transition: transform .4s;
+}
+
 </style>

@@ -199,9 +199,19 @@ ul {
     font-weight: normal;
     font-size: 1.2em;
     line-height: 1.7;
+    transition: all ease-in-out .2s;
 
     svg {
       margin-right: 9px;
+    }
+
+    &:hover {
+      color: $color-black;
+
+      svg,
+      path {
+        fill: $color-black;
+      }
     }
   }
 }

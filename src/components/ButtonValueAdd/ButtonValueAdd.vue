@@ -60,8 +60,13 @@ export default {
     line-height: 3.6;
     height: 100%;
     justify-content: center;
-    max-width: 212px;
+    transition: all ease-in-out .2s;
     width: 100%;
+
+    &:hover {
+      background-color: $color-blue-dark;
+      color: $color-white;
+    }
   }
 }
 </style>
