@@ -15,11 +15,7 @@
 
           <div class="progress">
             <p>Total R$ 200.00</p>
-            <div class="progress-bar">
-              <div class="progress-bar-value">
-                <p>R$ {{ formatValue(item.money) }}</p>
-              </div>
-            </div>
+            <ProgressBar :value="item.money" />
           </div>
           <div class="open-modal">
             <button @click="openModal(item.id, item.employee_name)">
@@ -36,12 +32,14 @@
 
 <script>
 import BarAddedValue from '@/components/BarAddedValue/BarAddedValue.vue';
+import ProgressBar from '@/components/ProgressBar/ProgressBar.vue';
 import { mapState } from 'vuex';
 
 export default {
   name: 'Card',
   components: {
     BarAddedValue,
+    ProgressBar,
   },
   methods: {
     openModal(id, name) {
@@ -66,7 +64,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-@import "@/utils/mixin-style.scss";
+@import "@/utils/variables-style.scss";
 @import "@/utils/mixin-style.scss";
 
 .container {
