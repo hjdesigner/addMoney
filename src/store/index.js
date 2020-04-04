@@ -5,7 +5,7 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
-    statusModal: false,
+    clients: [],
     modal: {
       visible: false,
       name: '',
@@ -18,6 +18,9 @@ export default new Vuex.Store({
     },
     closeModal(state) {
       state.modal = { visible: false, name: '', id: 0 };
+    },
+    getClients(state, payload) {
+      state.clients = payload;
     },
   },
   actions: {
