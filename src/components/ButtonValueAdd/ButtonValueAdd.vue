@@ -1,23 +1,35 @@
 <template>
   <ul class="list-value-add">
     <li>
-      <button>R$ 25</button>
+      <button @click="addMoney(modal.id, 25)">R$ 25</button>
     </li>
     <li>
-      <button>R$ 50</button>
+      <button @click="addMoney(modal.id, 50)">R$ 50</button>
     </li>
     <li>
-      <button>R$ 75</button>
+      <button @click="addMoney(modal.id, 75)">R$ 75</button>
     </li>
     <li>
-      <button>R$ 125</button>
+      <button @click="addMoney(modal.id, 125)">R$ 125</button>
     </li>
   </ul>
 </template>
 
 <script>
+import { mapState } from 'vuex';
+
 export default {
   name: 'ButtonValueAdd',
+  methods: {
+    addMoney(id, value) {
+      this.$store.commit('addMoney', { employee: id, value });
+    },
+  },
+  computed: {
+    ...mapState({
+      modal: 'modal',
+    }),
+  },
 };
 </script>
 

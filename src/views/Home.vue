@@ -13,7 +13,6 @@ import Title from '@/components/Title/Title.vue';
 import Card from '@/components/Card/Card.vue';
 import Modal from '@/components/Modal/Modal.vue';
 import ButtonValueAdd from '@/components/ButtonValueAdd/ButtonValueAdd.vue';
-import axios from 'axios';
 
 export default {
   name: 'Home',
@@ -24,10 +23,7 @@ export default {
     ButtonValueAdd,
   },
   created() {
-    axios.get('http://dummy.restapiexample.com/api/v1/employees')
-      .then((result) => {
-        this.$store.commit('getClients', result.data);
-      });
+    this.$store.commit('getClients');
   },
 };
 </script>
