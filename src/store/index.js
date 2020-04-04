@@ -6,6 +6,8 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
+    loader: true,
+    error: false,
     clients: [],
     modal: {
       visible: false,
@@ -21,9 +23,14 @@ export default new Vuex.Store({
       state.modal = { visible: false, name: '', id: 0 };
     },
     getClients(state) {
-      axios.get('http://dummy.restapiexample.com/api/v1/employees')
+      axios.get('https://dummy.restapiexample.com/api/v1/employees')
         .then((result) => {
           state.clients = result.data;
+          state.loader = false;
+        })
+        .catch(() => {
+          state.loader = false;
+          state.error = true;
         });
     },
     addMoney(state, payload) {

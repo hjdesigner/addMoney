@@ -1,20 +1,31 @@
 <template>
   <div id="app">
+    <Warning text="Carregando..." v-if="isLoading" />
+    <Warning text="Houve um erro, tente novamente mais tarde." v-if="isError" />
     <HeaderMobile />
     <NavDesktop />
-    <router-view/>
+    <router-view />
   </div>
 </template>
 
 <script>
 import HeaderMobile from '@/components/HeaderMobile/HeaderMobile.vue';
 import NavDesktop from '@/components/NavDesktop/NavDesktop.vue';
+import Warning from '@/components/Warning/Warning.vue';
+import { mapState } from 'vuex';
 
 export default {
   name: 'App',
   components: {
     HeaderMobile,
     NavDesktop,
+    Warning,
+  },
+  computed: {
+    ...mapState({
+      isLoading: 'loader',
+      isError: 'error',
+    }),
   },
 };
 </script>
