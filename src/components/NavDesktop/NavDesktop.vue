@@ -38,6 +38,7 @@ export default {
 nav {
   background-color: $color-green;
   display: none;
+  min-width: 228px;
   width: 228px;
 
   @include desktop {

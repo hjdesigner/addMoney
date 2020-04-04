@@ -23,6 +23,7 @@ export default new Vuex.Store({
       state.modal = { visible: false, name: '', id: 0 };
     },
     getClients(state) {
+      state.loader = true;
       axios.get('https://dummy.restapiexample.com/api/v1/employees')
         .then((result) => {
           state.clients = result.data;
@@ -50,6 +51,9 @@ export default new Vuex.Store({
         return item;
       });
       state.modal = { visible: false, name: '', id: 0 };
+    },
+    closeLoader(state) {
+      state.loader = false;
     },
   },
   actions: {
