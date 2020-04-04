@@ -1,34 +1,31 @@
-# addmoney
+# Add Money
 
-## Project setup
-```
-npm install
-```
+## Sobre o projeto
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+A aplicação auxilia você de maneira simples e prática para adicionar dinheiro para um funcionário;
 
-### Compiles and minifies for production
-```
-npm run build
-```
+# O que tem no projeto
+* Vue Cli
+* Vuex
+* Vue Router
+* Axios
+* EsLint
+* Storybook
 
-### Run your unit tests
-```
-npm run test:unit
-```
+## Dependência
+* Node.js >= v9
 
-### Lints and fixes files
-```
-npm run lint
-```
 
-### Storybook
-```
-npm run storybook
-```
+## Rodando o projeto
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+* Clone ou faça o download desse repositório;
+* Instale as dependências: `npm install`
+* Rode o projeto: `npm run serve`
+* Para rodar a biblioteca UI: `npm run storybook`
+* Para rodar o lint: `npm run lint`
+* Para fazer o deploy: `npm run deploy`
+
+
+## Acessando o projeto
+* Local: `http://localhost:8080`
+* Online: `https://addmoney-ff1f9.web.app/`
