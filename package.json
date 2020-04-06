@@ -5,7 +5,7 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "test:unit": "vue-cli-service test:unit",
+    "test:unit": "vue-cli-service test:unit --watch",
     "lint": "vue-cli-service lint",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
@@ -15,7 +15,9 @@
     "axios": "^0.19.2",
     "core-js": "^3.6.4",
     "v-switch-case": "^1.0.3",
+    "vee-validate": "^3.2.5",
     "vue": "^2.6.11",
+    "vue-currency-input": "^1.17.3",
     "vue-numeral-filter": "^1.1.1",
     "vue-router": "^3.1.5",
     "vuex": "^3.1.2"

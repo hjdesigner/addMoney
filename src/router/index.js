@@ -15,6 +15,11 @@ export const routes = [
     name: 'About',
     component: () => import('../views/About.vue'),
   },
+  {
+    path: '/cadastro',
+    name: 'Cadastro',
+    component: () => import('../views/Register.vue'),
+  },
 ];
 
 const router = new VueRouter({
