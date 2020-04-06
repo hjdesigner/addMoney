@@ -2,7 +2,7 @@
 
 ## Sobre o projeto
 
-A aplicação auxilia você de maneira simples e prática para adicionar dinheiro para um funcionário;
+A aplicação auxilia você de maneira simples e prática para adicionar dinheiro para um funcionário e cadastrar um novo funcionário;
 
 # O que tem no projeto
 * Vue Cli
